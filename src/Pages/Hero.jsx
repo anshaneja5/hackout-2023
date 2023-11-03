@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Typed from "react-typed";
 import pic from "../Images/Server-amico.png";
 import Card from "../Components/Card";
 import { datas } from "../data";
+import { useNavigate } from "react-router-dom";
 export default function Hero() {
   const style = {
     fontFamily: "Playpen Sans, cursive", // Using Gloria Hallelujah
   };
+
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[#050A15] w-[100%] h-[100%]">
       <div className="w-[100%] flex justify-center p-4">
@@ -48,8 +52,15 @@ export default function Hero() {
       </div>
       <div className="bg-[#050A15] w-[100vw] h-[100vh] ">
         <div className="grid  xs:gridcols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl p-2 mx-auto space-y-10 space-x-5 min-h-[80vh]">
-          {datas.map((data) => {
-            return <Card data={data}></Card>;
+          {datas.map((data, i) => {
+            function handleClick() {
+              navigate(`/${data.name}`);
+            }
+            return (
+              <div key={i} onClick={handleClick} className="temp">
+                <Card data={data}></Card>;
+              </div>
+            );
           })}
         </div>
       </div>

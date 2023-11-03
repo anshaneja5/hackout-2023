@@ -17,6 +17,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="*" element={<div>404 Not Found</div>} />
+        <Route path="/Tools" element={<Tools />} />
+        <Route path="/Gaming" element={<Gaming />} />
         <Route path="/AITools" element={<AiTools />} />
         <Route path="/Educational" element={<Educational />} />
         <Route path="/AdBlocker" element={<AdBlocker />} />
@@ -24,7 +26,7 @@ export default function App() {
         <Route path="/Gaming" element={<Gaming />} />
         <Route path="/Books" element={<Books />} />
         <Route path="/Music" element={<Music />} />
-        <Route path="/Tools" element={<Tools />} />
+        {/* <Route path="/:domain" element={<AiTools />} /> */}
       </Routes>
     </div>
   );

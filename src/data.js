@@ -1,5 +1,19 @@
 export const datas = [
   {
+    id: 0,
+    name: "Tools",
+    description:
+      "LFKjdklgnalkg",
+    link: "https://images.unsplash.com/photo-1686191128863-2c62e254512d?auto=format&fit=crop&q=80&w=1781&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: -1,
+    name: "Gaming",
+    description:
+      "LFKjdklgnalkg",
+    link: "https://images.unsplash.com/photo-1686191128863-2c62e254512d?auto=format&fit=crop&q=80&w=1781&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
     id: 1,
     name: "AITools",
     description:

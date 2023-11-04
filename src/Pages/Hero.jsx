@@ -4,6 +4,7 @@ import pic from "../Images/Server-amico.png";
 import Card from "../Components/Card";
 import { datas } from "../data";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../Components/Spinner";
 export default function Hero() {
   const style = {
     fontFamily: "Roboto Slab, cursive", // Using Gloria Hallelujah

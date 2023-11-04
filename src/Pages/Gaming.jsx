@@ -4,14 +4,18 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getLinks } from "../redux/slices/appConfigSlice";
 import pic from "../Images/Card game-bro.png";
+import Spinner from "../Components/Spinner";
 function Tools() {
+  const isLoading = useSelector((s) => s.appConfigReducer.isLoading);
   const data = useSelector((s) => s.appConfigReducer.data);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getLinks({ domain: "Gaming" }));
   }, [dispatch]);
-
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <div className="bg-[#050A15] w-[100%] h-[100%] flex flex-col items-center">
       <div className="flex">

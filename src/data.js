@@ -43,16 +43,16 @@ export const datas = [
   },
   {
     id: 6,
-    name: "Books",
+    name: "LinuxTools",
     description:
-      "Rich collections of literature encompassing genres, knowledge, fiction, and educational content.",
-    link: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "A versatile and open-source operating system widely used across various devices, renowned for its customization, security, and diverse distributions",
+    link: "https://images.ctfassets.net/lzny33ho1g45/UWH9IWnkrHogTs50L5FM8/85b518e7aedd196d2b6b541d0f90c7fb/Linux.jpg",
   },
   {
     id: 7,
-    name: "Music",
+    name: "AudioTools",
     description:
-      "Vast libraries providing music from diverse genres, artists, and eras for varied tastes.",
-    link: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "A diverse array of software and resources designed for music, podcasts, sound manipulation, and various audio-related tasks.",
+    link: "https://aztecsound.com/wp-content/uploads/2020/04/different-types-of-audio-visual-equipment.jpg,",
   },
 ];

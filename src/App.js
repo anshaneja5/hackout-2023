@@ -3,17 +3,16 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Pages/Hero";
 import { Route, Routes } from "react-router-dom";
 import AdBlocker from "./Pages/AdBlocker";
-import Books from "./Pages/Books";
+import LinuxTools from "./Pages/LinuxTools";
 import Educational from "./Pages/Educational";
 import Gaming from "./Pages/Gaming";
 import MoviesTvAnime from "./Pages/MoviesTvAnime";
-import Music from "./Pages/Music";
+import AudioTools from "./Pages/AudioTools";
 import Tools from "./Pages/Tools";
 import AiTools from "./Pages/AiTools";
 import Login, { AUTH_GOOGLE_CLIENT_ID } from "./Pages/Auth/Login";
 import { gapi } from "gapi-script";
 import AuthStack from "./Pages/Auth/AuthStack";
-
 export default function App() {
   useEffect(() => {
     function start() {
@@ -37,8 +36,8 @@ export default function App() {
         <Route path="/AdBlocker" element={<AdBlocker />} />
         <Route path="/MoviesTVAnime" element={<MoviesTvAnime />} />
         <Route path="/Gaming" element={<Gaming />} />
-        <Route path="/Books" element={<Books />} />
-        <Route path="/Music" element={<Music />} />
+        <Route path="/AudioTools" element={<AudioTools />} />
+        <Route path="/LinuxTools" element={<LinuxTools />} />
         <Route element={<AuthStack />}>
           <Route path="/login" element={<Login />} />
         </Route>

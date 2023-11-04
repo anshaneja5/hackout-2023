@@ -1,6 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getLinks } from "../redux/slices/appConfigSlice";
 import Spinner from "../Components/Spinner";
@@ -25,8 +23,11 @@ function Tools() {
             <p className="font-bold underline mb-2">Linux Apps</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Linux Apps") {
+                if (e.subdomain === "Linux Apps") {
                   return e;
+                }
+                else{
+                  return null
                 }
               })
               ?.map((d, i) => {
@@ -37,6 +38,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -49,8 +51,12 @@ function Tools() {
             <p className="font-bold underline mb-2">Software Sites</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Software Sites") {
+                if (e.subdomain === "Software Sites") {
                   return e;
+                }
+                else{
+                  return null;
+                
                 }
               })
               ?.map((d, i) => {
@@ -61,6 +67,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -73,18 +80,20 @@ function Tools() {
             <p className="font-bold underline mb-2">Linux Video</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Linux Video") {
+                if (e.subdomain === "Linux Video") {
                   return e;
+                }
+                else{
+                  return null
                 }
               })
               ?.map((d, i) => {
                 return (
                   <div key={i} className="">
-                    {/* <p className="text-red">{d.sitetitle}</p>
-                  <p className="text-red">{d.sitelink}</p> */}
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -97,8 +106,11 @@ function Tools() {
             <p className="font-bold underline mb-2">Linux Audio</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Linux Audio") {
+                if (e.subdomain === "Linux Audio") {
                   return e;
+                }
+                else{
+                  return null
                 }
               })
               ?.map((d, i) => {
@@ -109,6 +121,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -121,8 +134,11 @@ function Tools() {
             <p className="font-bold underline mb-2">Linux Image</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Linux Image") {
+                if (e.subdomain === "Linux Image") {
                   return e;
+                }
+                else{
+                  return null;
                 }
               })
               ?.map((d, i) => {
@@ -133,6 +149,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -145,6 +162,7 @@ function Tools() {
         <div>
           <img
             src={pic}
+            alt=""
             className="lg:h-[450px] lg:w-[550px] md:w-[450px] md:h-[350px] w-0 h-0 sm:w-[350px] sm:h-[250px] xs:w-[250px] xs:w-[150px]"
           ></img>
         </div>

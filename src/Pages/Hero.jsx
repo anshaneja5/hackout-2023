@@ -56,6 +56,7 @@ export default function Hero() {
           <img
             src={pic}
             alt=""
+            alt=""
             className="sm:w-[400px] md:w-[450px] min-[320px]:w-[300px] s:w-[300px] w-0"
           ></img>
         </div>

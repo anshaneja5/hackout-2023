@@ -25,7 +25,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Download Gamess</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Download Games") {
+                if (e.subdomain === "Download Games") {
                   return e;
                 }
               })
@@ -37,6 +37,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -49,7 +50,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Single Games</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Single Games") {
+                if (e.subdomain === "Single Games") {
                   return e;
                 }
               })
@@ -61,6 +62,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -73,7 +75,7 @@ function Tools() {
             <p className="font-bold underline mb-2">ROM Sitest</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "ROM Sites") {
+                if (e.subdomain === "ROM Sites") {
                   return e;
                 }
               })
@@ -85,6 +87,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -97,7 +100,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Browser Emulators</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Browser Emulators") {
+                if (e.subdomain === "Browser Emulators") {
                   return e;
                 }
               })
@@ -109,6 +112,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -121,7 +125,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Arcade / Retro</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Arcade / Retro") {
+                if (e.subdomain === "Arcade / Retro") {
                   return e;
                 }
               })
@@ -133,6 +137,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -145,6 +150,7 @@ function Tools() {
         <div>
           <img
             src={pic}
+            alt=""
             className="lg:h-[450px] lg:w-[550px] md:w-[450px] md:h-[350px] w-0 h-0 sm:w-[350px] sm:h-[250px] xs:w-[250px] xs:w-[150px]"
           ></img>
         </div>

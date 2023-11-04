@@ -25,7 +25,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Adblocking</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Adblocking") {
+                if (e.subdomain === "Adblocking") {
                   return e;
                 }
               })
@@ -37,6 +37,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -49,7 +50,7 @@ function Tools() {
             <p className="font-bold underline mb-2">CAdblocking Extension</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Adblocking Extension") {
+                if (e.subdomain === "Adblocking Extension") {
                   return e;
                 }
               })
@@ -61,6 +62,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -73,7 +75,7 @@ function Tools() {
             <p className="font-bold underline mb-2">DNS Adblocking</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "DNS Adblocking") {
+                if (e.subdomain === "DNS Adblocking") {
                   return e;
                 }
               })
@@ -85,6 +87,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -97,7 +100,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Antivirus</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Antivirus") {
+                if (e.subdomain === "Antivirus") {
                   return e;
                 }
               })
@@ -109,6 +112,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -121,7 +125,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Browser Tools</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Browser Tools") {
+                if (e.subdomain === "Browser Tools") {
                   return e;
                 }
               })
@@ -133,6 +137,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -145,6 +150,7 @@ function Tools() {
         <div>
           <img
             src={pic}
+            alt=""
             className="lg:h-[450px] lg:w-[550px] md:w-[450px] md:h-[350px] w-0 h-0 sm:w-[350px] sm:h-[250px] xs:w-[250px] xs:w-[150px]"
           ></img>
         </div>

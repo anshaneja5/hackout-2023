@@ -22,7 +22,7 @@ function Login() {
   return (
     <div className="w-[100vw] h-[100vh] justify-center items-center flex flex-col">
       <div>
-        <img src={pic} className="w-[400px] h-[400px]"></img>
+        <img src={pic} alt="" className="w-[400px] h-[400px]"></img>
       </div>
       <GoogleOAuthProvider clientId={AUTH_GOOGLE_CLIENT_ID}>
         <GoogleLogin onSuccess={handleSuccess} onError={handleFailure} />

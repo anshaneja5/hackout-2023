@@ -1,6 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getLinks } from "../redux/slices/appConfigSlice";
 import pic from "../Images/desktop computer-bro.png";
@@ -25,18 +23,17 @@ function Tools() {
             <p className="font-bold underline mb-2">Cheat Sheets</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Cheat Sheets") {
+                if (e.subdomain === "Cheat Sheets") {
                   return e;
                 }
               })
               ?.map((d, i) => {
                 return (
                   <div key={i} className="">
-                    {/* <p className="text-red">{d.sitetitle}</p>
-                  <p className="text-red">{d.sitelink}</p> */}
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -49,18 +46,17 @@ function Tools() {
             <p className="font-bold underline mb-2">Courses / Tutorials</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Courses / Tutorials") {
+                if (e.subdomain === "Courses / Tutorials") {
                   return e;
                 }
               })
               ?.map((d, i) => {
                 return (
                   <div key={i} className="">
-                    {/* <p className="text-red">{d.sitetitle}</p>
-                  <p className="text-red">{d.sitelink}</p> */}
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -73,7 +69,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Game Development</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Game Development") {
+                if (e.subdomain === "Game Development") {
                   return e;
                 }
               })
@@ -85,6 +81,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -97,7 +94,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Web Development</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Web Development") {
+                if (e.subdomain === "Web Development") {
                   return e;
                 }
               })
@@ -109,6 +106,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -121,7 +119,7 @@ function Tools() {
             <p className="font-bold underline mb-2">App Development</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "App Development") {
+                if (e.subdomain === "App Development") {
                   return e;
                 }
               })
@@ -133,6 +131,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -145,6 +144,7 @@ function Tools() {
         <div>
           <img
             src={pic}
+            alt=""
             className="lg:h-[450px] lg:w-[550px] md:w-[450px] md:h-[350px] w-0 h-0 sm:w-[350px] sm:h-[250px] xs:w-[250px] xs:w-[150px]"
           ></img>
         </div>

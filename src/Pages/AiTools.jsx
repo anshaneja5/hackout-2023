@@ -25,7 +25,7 @@ function Tools() {
             <p className="font-bold underline mb-2">AI Chatbots</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "AI Chatbots") {
+                if (e.subdomain === "AI Chatbots") {
                   return e;
                 }
               })
@@ -37,6 +37,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -49,7 +50,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Roleplaying Bots</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Roleplaying Bots") {
+                if (e.subdomain === "Roleplaying Bots") {
                   return e;
                 }
               })
@@ -61,6 +62,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -73,7 +75,7 @@ function Tools() {
             <p className="font-bold underline mb-2">ChatGPT Tools</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "ChatGPT Tools") {
+                if (e.subdomain === "ChatGPT Tools") {
                   return e;
                 }
               })
@@ -85,6 +87,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -97,7 +100,7 @@ function Tools() {
             <p className="font-bold underline mb-2">Text Generators</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "Text Generators") {
+                if (e.subdomain === "Text Generators") {
                   return e;
                 }
               })
@@ -109,6 +112,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -121,7 +125,7 @@ function Tools() {
             <p className="font-bold underline mb-2">SD Models / Prompts</p>
             {data
               ?.filter((e) => {
-                if (e.subdomain == "SD Models / Prompts") {
+                if (e.subdomain === "SD Models / Prompts") {
                   return e;
                 }
               })
@@ -133,6 +137,7 @@ function Tools() {
                     <a
                       href={d.sitelink}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
                       {d.sitetitle}
@@ -145,6 +150,7 @@ function Tools() {
         <div>
           <img
             src={pic}
+            alt=""
             className="lg:h-[450px] lg:w-[550px] md:w-[450px] md:h-[350px] w-0 h-0 sm:w-[350px] sm:h-[250px] xs:w-[250px] xs:w-[150px]"
           ></img>
         </div>

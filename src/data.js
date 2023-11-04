@@ -4,7 +4,7 @@ export const datas = [
     name: "Tools",
     description:
       "A range of utilities aiding in tasks, from development to productivity and more.",
-    link: "https://whatfix.com/blog/wp-content/uploads/2023/01/blog-hero-image-23.png",
+    link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIzb1NCmaYsFTbTF621u-6pk5yV4zR6AsnDQ",
   },
   {
     id: 1,
@@ -32,7 +32,7 @@ export const datas = [
     name: "AdBlocker",
     description:
       "Tools to prevent intrusive ads for a seamless and ad-free browsing experience online.",
-    link: "https://images.prismic.io/ghostery/3dcc880b-95c6-42e0-a2c9-48c6e64c19ce_the-best-free-ad-blocker-for-firefox-in-2023.png?auto=compress,format",
+    link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIAa8EaWFaiZZfOJHqvREDSfV2HOXTFT7rxw",
   },
   {
     id: 5,

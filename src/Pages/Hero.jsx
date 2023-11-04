@@ -17,19 +17,17 @@ export default function Hero() {
   return (
     <div className="bg-[#050A15] w-[100%] h-[100%]">
       <div className="w-[100%] flex justify-center p-4">
-        <div>
+        <div className="flex flex-col justify-center">
           <h1
-            className={`text-[#D292FF] text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-3`}
+            className={`text-[#FF04AA] text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-3`}
             style={style}
           >
-            One Stop Solution for your <br></br>EVERY NEED
+            Your Multiverse of <span className="text-[#FFB904]">Resources</span>
           </h1>
           <h1
-            className="text-white text-2xl sm:text-3xl lg:text-5xl md:text-4xl font-bold"
+            className="text-white text-lg sm:text-xl lg:text-3xl md:text-2xl font-bold"
             style={style2}
-          >
-            Find
-          </h1>
+          ></h1>
           <Typed
             strings={[
               " AI-Tools",
@@ -42,8 +40,7 @@ export default function Hero() {
             backDelay={1000}
             loop
             smartBackspace
-            className="text-white text-2xl sm:text-3xl lg:text-5xl font-bold md:text-4xl"
-            style={style2}
+            className="text-white text-lg sm:text-xl lg:text-3xl md:text-2xl font-bold "
           />
           <h1
             className="text-white text-md sm:text-xl lg:text-3xl font-bold md:text-4xl mt-5"
@@ -56,22 +53,17 @@ export default function Hero() {
           <img
             src={pic}
             alt=""
-            alt=""
-            className="sm:w-[400px] md:w-[450px] min-[320px]:w-[300px] s:w-[300px] w-0"
+            className="sm:w-[350px] md:w-[400px] min-[320px]:w-[250px] w-0"
           ></img>
         </div>
       </div>
       <div className="bg-[#050A15] w-[100vw] h-[100vh] ">
-        <div className="grid  xs:gridcols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl p-2 mx-auto space-y-10 space-x-5 min-h-[80vh]">
+        <div className="grid   sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl p-2 mx-auto space-y-10 space-x-5 min-h-[0vh]">
           {datas.map((data, i) => {
             function handleClick() {
               navigate(`/${data.name}`);
             }
-            return (
-              <div key={i} onClick={handleClick} className="temp">
-                <Card data={data}></Card>;
-              </div>
-            );
+            return <Card key={i} onClick={handleClick} data={data}></Card>;
           })}
         </div>
       </div>

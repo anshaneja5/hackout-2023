@@ -10,7 +10,7 @@ function Tools() {
 
   useEffect(() => {
     dispatch(getLinks({ domain: "AdBlocker" }));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="bg-[#050A15] w-[100%] h-[100%] flex flex-col items-center">

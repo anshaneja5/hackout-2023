@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import Hero from "./Pages/Hero";
 import { Route, Routes } from "react-router-dom";
@@ -10,13 +10,26 @@ import MoviesTvAnime from "./Pages/MoviesTvAnime";
 import Music from "./Pages/Music";
 import Tools from "./Pages/Tools";
 import AiTools from "./Pages/AiTools";
+import Login, { AUTH_GOOGLE_CLIENT_ID } from "./Pages/Auth/Login";
+import { gapi } from "gapi-script";
+import AuthStack from "./Pages/Auth/AuthStack";
+
 export default function App() {
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: AUTH_GOOGLE_CLIENT_ID,
+        scope: "",
+      });
+    }
+    gapi.load("client:auth2", start);
+  }, []);
+
   return (
     <div className="flex flex-col w-[100vw] h-[100vh] bg-[#050A15] overflow-x-hidden">
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="*" element={<div>404 Not Found</div>} />
         <Route path="/Tools" element={<Tools />} />
         <Route path="/Gaming" element={<Gaming />} />
         <Route path="/AITools" element={<AiTools />} />
@@ -26,7 +39,10 @@ export default function App() {
         <Route path="/Gaming" element={<Gaming />} />
         <Route path="/Books" element={<Books />} />
         <Route path="/Music" element={<Music />} />
-        {/* <Route path="/:domain" element={<AiTools />} /> */}
+        <Route element={<AuthStack />}>
+          <Route path="/login" element={<Login />} />
+        </Route>
+        <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </div>
   );

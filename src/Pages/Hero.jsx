@@ -6,9 +6,11 @@ import { datas } from "../data";
 import { useNavigate } from "react-router-dom";
 export default function Hero() {
   const style = {
-    fontFamily: "Playpen Sans, cursive", // Using Gloria Hallelujah
+    fontFamily: "Roboto Slab, cursive", // Using Gloria Hallelujah
   };
-
+  const style2 = {
+    fontFamily: "Mulish, cursive", // Using Gloria Hallelujah
+  };
   const navigate = useNavigate();
 
   return (
@@ -21,7 +23,10 @@ export default function Hero() {
           >
             One Stop Solution for your <br></br>EVERY NEED
           </h1>
-          <h1 className="text-white text-2xl sm:text-3xl lg:text-5xl md:text-4xl font-bold">
+          <h1
+            className="text-white text-2xl sm:text-3xl lg:text-5xl md:text-4xl font-bold"
+            style={style2}
+          >
             Find
           </h1>
           <Typed
@@ -37,8 +42,12 @@ export default function Hero() {
             loop
             smartBackspace
             className="text-white text-2xl sm:text-3xl lg:text-5xl font-bold md:text-4xl"
+            style={style2}
           />
-          <h1 className="text-white text-md sm:text-xl lg:text-3xl font-bold md:text-4xl mt-5">
+          <h1
+            className="text-white text-md sm:text-xl lg:text-3xl font-bold md:text-4xl mt-5"
+            style={style}
+          >
             Dive Down in OCEAN of RESOURCES 👇
           </h1>
         </div>

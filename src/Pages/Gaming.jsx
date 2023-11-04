@@ -1,6 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getLinks } from "../redux/slices/appConfigSlice";
 import pic from "../Images/Card game-bro.png";
@@ -28,6 +26,9 @@ function Tools() {
                 if (e.subdomain === "Download Games") {
                   return e;
                 }
+                else{
+                  return null
+                }
               })
               ?.map((d, i) => {
                 return (
@@ -52,6 +53,10 @@ function Tools() {
               ?.filter((e) => {
                 if (e.subdomain === "Single Games") {
                   return e;
+                }
+
+                else{
+                  return null
                 }
               })
               ?.map((d, i) => {
@@ -78,6 +83,9 @@ function Tools() {
                 if (e.subdomain === "ROM Sites") {
                   return e;
                 }
+                else{
+                  return null
+                }
               })
               ?.map((d, i) => {
                 return (
@@ -103,6 +111,9 @@ function Tools() {
                 if (e.subdomain === "Browser Emulators") {
                   return e;
                 }
+                else{
+                  return null
+                }
               })
               ?.map((d, i) => {
                 return (
@@ -127,6 +138,9 @@ function Tools() {
               ?.filter((e) => {
                 if (e.subdomain === "Arcade / Retro") {
                   return e;
+                }
+                else{
+                  return null
                 }
               })
               ?.map((d, i) => {

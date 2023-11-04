@@ -26,6 +26,9 @@ function Tools() {
                 if (e.subdomain === "Cheat Sheets") {
                   return e;
                 }
+                else{
+                  return null
+                }
               })
               ?.map((d, i) => {
                 return (
@@ -49,6 +52,9 @@ function Tools() {
                 if (e.subdomain === "Courses / Tutorials") {
                   return e;
                 }
+                else{
+                  return null
+                }
               })
               ?.map((d, i) => {
                 return (
@@ -71,6 +77,9 @@ function Tools() {
               ?.filter((e) => {
                 if (e.subdomain === "Game Development") {
                   return e;
+                }
+                else{
+                  return null
                 }
               })
               ?.map((d, i) => {
@@ -97,6 +106,9 @@ function Tools() {
                 if (e.subdomain === "Web Development") {
                   return e;
                 }
+                else{
+                  return null
+                }
               })
               ?.map((d, i) => {
                 return (
@@ -121,6 +133,9 @@ function Tools() {
               ?.filter((e) => {
                 if (e.subdomain === "App Development") {
                   return e;
+                }
+                else{
+                  return null
                 }
               })
               ?.map((d, i) => {

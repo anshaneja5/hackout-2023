@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function Card(props) {
   return (
     <div
-      className="flex flex-col items-center justify-center 
+      className="flex flex-col items-center justify-center bg-[#050A15]
     hover:scale-110 transition duration-300 ease-in gap-3 p-4 ml-5 rounded-xl outline cursor-pointer "
     >
       <NavLink to={props.data.name}>

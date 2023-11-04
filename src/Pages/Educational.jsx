@@ -1,6 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getLinks } from "../redux/slices/appConfigSlice";
 import pic from "../Images/Education-bro.png";
@@ -28,6 +26,9 @@ function Tools() {
                 if (e.subdomain === "Documentaries") {
                   return e;
                 }
+                else{
+                  return null
+                }
               })
               ?.map((d, i) => {
                 return (
@@ -52,6 +53,9 @@ function Tools() {
               ?.filter((e) => {
                 if (e.subdomain === "Courses Streaming") {
                   return e;
+                }
+                else{
+                  return null
                 }
               })
               ?.map((d, i) => {
@@ -78,6 +82,9 @@ function Tools() {
                 if (e.subdomain === "Torrenting") {
                   return e;
                 }
+                else{
+                  return null
+                }
               })
               ?.map((d, i) => {
                 return (
@@ -103,6 +110,9 @@ function Tools() {
                 if (e.subdomain === "Games") {
                   return e;
                 }
+                else{
+                  return null
+                }
               })
               ?.map((d, i) => {
                 return (
@@ -127,6 +137,9 @@ function Tools() {
               ?.filter((e) => {
                 if (e.subdomain === "Engineering") {
                   return e;
+                }
+                else{
+                  return null
                 }
               })
               ?.map((d, i) => {

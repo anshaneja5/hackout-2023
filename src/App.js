@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "./Components/Navbar";
 import Hero from "./Pages/Hero";
 import { Route, Routes } from "react-router-dom";
@@ -13,11 +13,13 @@ import AiTools from "./Pages/AiTools";
 import Login from "./Pages/Auth/Login";
 
 import AuthStack from "./Pages/Auth/AuthStack";
+
 export default function App() {
  
 
   return (
     <div className="flex flex-col w-[100vw] h-[100vh] bg-[#050A15] overflow-x-hidden">
+      {/* <Display /> */}
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Hero />} />

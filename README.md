@@ -1,4 +1,4 @@
-# hackout-2023-frontend
+# ResourcesGuru
 We are ResourceGuru take on the challenge of providing resources related to everyday common life of a student at the service of our hands. We have a wide array of domains for which we provide suitable requirements.
 
 You need to watch movies, here we provide you with websites where you can watch movies 

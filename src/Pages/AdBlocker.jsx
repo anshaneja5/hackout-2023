@@ -135,12 +135,12 @@ function Tools() {
                     {/* <p className="text-red">{d.sitetitle}</p>
                   <p className="text-red">{d.sitelink}</p> */}
                     <a
-                      href={d.sitelink}
+                      href={d.siteLink}
                       target="_blank"
                       rel="noreferrer"
                       className="text-blue-500 text-[25px]"
                     >
-                      {d.sitetitle}
+                      {d.siteTitle}
                     </a>
                   </div>
                 );

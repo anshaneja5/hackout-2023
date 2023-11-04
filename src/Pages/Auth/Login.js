@@ -1,6 +1,6 @@
-import { GoogleLogin } from "react-google-login";
+import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
+// import { GoogleLogin } from "react-google-login";
 import React from "react";
-import { gapi } from "gapi-script";
 import { useNavigate } from "react-router-dom";
 import pic from "../../Images/Computer login-bro.png";
 export const AUTH_GOOGLE_CLIENT_ID =
@@ -11,8 +11,7 @@ export const AUTH_GITHUB_CLIENT_ID = "865d2cb224eb6f8a83c6";
 function Login() {
   const navigate = useNavigate();
   function handleSuccess(res) {
-    console.log(res.profileObj);
-    const accessToken = gapi.auth.getToken().access_token;
+    const accessToken = res.credential;
     localStorage.setItem("accessToken", accessToken);
     navigate("/");
   }
@@ -25,14 +24,9 @@ function Login() {
       <div>
         <img src={pic} className="w-[400px] h-[400px]"></img>
       </div>
-      <GoogleLogin
-        clientId={AUTH_GOOGLE_CLIENT_ID}
-        buttonText="Login with google"
-        onSuccess={handleSuccess}
-        onFailure={handleFailure}
-        isSignedIn={true}
-        cookiePolicy={"single_host_origin"}
-      />
+      <GoogleOAuthProvider clientId={AUTH_GOOGLE_CLIENT_ID}>
+        <GoogleLogin onSuccess={handleSuccess} onError={handleFailure} />
+      </GoogleOAuthProvider>
     </div>
   );
 }

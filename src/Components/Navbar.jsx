@@ -1,12 +1,12 @@
 import React from "react";
-import { GoogleLogout } from "react-google-login";
 import { Link, useNavigate } from "react-router-dom";
-import { AUTH_GOOGLE_CLIENT_ID } from "../Pages/Auth/Login";
+import { googleLogout } from "@react-oauth/google";
 
 export default function Navbar() {
   const navigate = useNavigate();
   const isLoggedIn = localStorage.getItem("accessToken");
   function handleLogout() {
+    googleLogout()
     localStorage.removeItem("accessToken");
     navigate("/");
   }
@@ -24,11 +24,8 @@ export default function Navbar() {
 
       {/* <button>/</button> */}
       {isLoggedIn ? (
-        <GoogleLogout
-          clientId={AUTH_GOOGLE_CLIENT_ID}
-          buttonText="Logout"
-          onLogoutSuccess={handleLogout}
-        />
+        <button onClick={ handleLogout}>Logout</button>
+        
       ) : (
         <button onClick={() => navigate("/login")}>Login</button>
       )}

@@ -10,19 +10,11 @@ import MoviesTvAnime from "./Pages/MoviesTvAnime";
 import AudioTools from "./Pages/AudioTools";
 import Tools from "./Pages/Tools";
 import AiTools from "./Pages/AiTools";
-import Login, { AUTH_GOOGLE_CLIENT_ID } from "./Pages/Auth/Login";
-import { gapi } from "gapi-script";
+import Login from "./Pages/Auth/Login";
+
 import AuthStack from "./Pages/Auth/AuthStack";
 export default function App() {
-  useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId: AUTH_GOOGLE_CLIENT_ID,
-        scope: "",
-      });
-    }
-    gapi.load("client:auth2", start);
-  }, []);
+ 
 
   return (
     <div className="flex flex-col w-[100vw] h-[100vh] bg-[#050A15] overflow-x-hidden">

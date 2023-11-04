@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+    await console.log();
   }, []);
 
   return (
